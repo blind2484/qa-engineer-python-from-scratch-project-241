@@ -1,0 +1,26 @@
+name: json test on push
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          enable-cache: true # Автоматически кэширует зависимости!
+
+      - name: Install dependencies
+        run: make install
+
+      - name: Run linter
+        run: make lint
+
+      - name: Run tests
+        run: make test
+
+      - name: Run test coverage
+        run: make test-coverage

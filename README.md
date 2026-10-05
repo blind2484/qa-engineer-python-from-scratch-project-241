@@ -1,5 +1,6 @@
 # Вычислитель отличий (QA Python)
 
+[![Github Actions Status](https://github.com/hexlet-boilerplates/python-package/workflows/Python%20CI/badge.svg)](https://github.com/hexlet-boilerplates/python-package/actions)
 [![hexlet-check](https://github.com/blind2484/qa-engineer-python-from-scratch-project-241/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/blind2484/qa-engineer-python-from-scratch-project-241/actions)
 
 В этом проекте отрабатывается работа с коллекциями. Изучаются способы построения и обхода деревьев. Вы познакомитесь с разными форматами данных (JSON, YAML), научитесь их парсить и формировать. Начнете писать тесты (pytest) и освоите разработку через них. Познакомитесь с непрерывной интеграцией (CI) и элементами экстремального программирования (XP)
@@ -23,7 +24,8 @@ cd qa-engineer-python-from-scratch-project-241
 ## Использование
 
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
-
+Вычислитель отличий. Шаг: Сравнение плоских файлов (JSON):
+[asciinema](https://asciinema.org/a/CdKZ9Bc1nE4qeU4S)
 ---
 
 <details>
