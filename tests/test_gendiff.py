@@ -11,6 +11,7 @@ def test_gendiff_json():
     actual = generate_diff('file1.json', 'file2.json', format_name='stylish')
     assert actual == expected
 
+
 def test_gendiff_yaml():
     path = Path(__file__).parent
     expected = (
