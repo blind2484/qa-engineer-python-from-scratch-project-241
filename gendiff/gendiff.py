@@ -1,3 +1,4 @@
+from gendiff.formatters.plain import plain
 from gendiff.formatters.stylish import stylish
 from gendiff.parser import parse_file_to_dict
 
@@ -36,6 +37,8 @@ def compare_dicts(first_file, second_file):
 def formatter(result_data, format_name):
     if format_name == 'stylish':
         return stylish(result_data)
+    if format_name == 'plain':
+        return plain(result_data)
     raise ValueError(f"Unknown output format: '{format_name}'")
 
 

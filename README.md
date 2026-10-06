@@ -25,6 +25,7 @@ cd qa-engineer-python-from-scratch-project-241
 
 Вычислитель отличий. Шаг: Сравнение плоских файлов (JSON): [asciinema](https://asciinema.org/a/CdKZ9Bc1nE4qeU4S)  
 Вычислитель отличий. Шаг: Сравнение плоских файлов (JSON, YAML): [asciinema](https://asciinema.org/a/h61S1FmaFTNVBFva)  
+Вычислитель отличий. Шаг: Форматирование "plain": [asciinema](https://asciinema.org/a/UB79bp2F5pRLy0QB)   
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 
 ---

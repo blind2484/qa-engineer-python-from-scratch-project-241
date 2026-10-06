@@ -19,3 +19,12 @@ def test_gendiff_yaml_stylish():
     ).read_text(encoding='utf-8')
     actual = generate_diff('file1.yml', 'file2.yml')
     assert actual == expected
+
+
+def test_gendiff_plain():
+    path = Path(__file__).parent
+    expected = (
+        path / 'test_data' / 'expected_plain.txt'
+    ).read_text(encoding='utf-8')
+    actual = generate_diff('file1.yml', 'file2.json', format_name='plain')
+    assert actual == expected
