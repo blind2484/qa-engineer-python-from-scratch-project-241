@@ -23,9 +23,12 @@ cd qa-engineer-python-from-scratch-project-241
 
 ## Использование
 
-<!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 Вычислитель отличий. Шаг: Сравнение плоских файлов (JSON):
 [asciinema](https://asciinema.org/a/CdKZ9Bc1nE4qeU4S)
+Вычислитель отличий. Шаг: Сравнение плоских файлов (JSON, YAML):
+[asciinema](https://asciinema.org/a/h61S1FmaFTNVBFva)
+<!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
+
 ---
 
 <details>

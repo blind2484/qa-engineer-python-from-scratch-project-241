@@ -1,19 +1,5 @@
-import json
-from pathlib import Path
-
-import yaml
-
-
-def parse_file_to_dict(file):
-    ext = Path(file).suffix.lstrip(".").lower()
-    with open(file, "r", encoding="utf-8") as f:
-        if ext == "json":
-            data = json.load(f)
-        elif ext in ["yaml", "yml"]:
-            data = yaml.safe_load(f)
-        else:
-            raise ValueError('Неподдерживаемый формат')
-    return data
+from gendiff.formatters.stylish import stylish
+from gendiff.parser import parse_file_to_dict
 
 
 def compare_dicts(first_file, second_file):
@@ -47,29 +33,13 @@ def compare_dicts(first_file, second_file):
     return result_data
 
 
-def formatter(result_data):
-    out = '{\n'
-    for key in result_data:
-        def to_lower(val):
-            if isinstance(val, bool):
-                return str(val).lower()
-            return val.lower() if isinstance(val, str) else val
-        value = to_lower(result_data[key].get('value'))
-        old_val = to_lower(result_data[key].get('old_value'))
-        new_val = to_lower(result_data[key].get('new_value'))
-        if result_data.get(key).get('status') == 'unchanged':
-            out += f'    {key}: {value}\n'
-        elif result_data.get(key).get('status') == 'removed':
-            out += f'  - {key}: {old_val}\n'
-        elif result_data.get(key).get('status') == 'added':
-            out += f'  + {key}: {new_val}\n'
-        elif result_data.get(key).get('status') == 'updated':
-            out += f'  - {key}: {old_val}\n  + {key}: {new_val}\n'
-    out += '}'
-    return out
+def formatter(result_data, format_name):
+    if format_name == 'stylish':
+        return stylish(result_data)
+    raise ValueError(f"Unknown output format: '{format_name}'")
 
 
-def generate_diff(first_file, second_file, format_name):
+def generate_diff(first_file, second_file, format_name='stylish'):
     diff_data = compare_dicts(first_file, second_file)
-    formatted_output = formatter(diff_data)
+    formatted_output = formatter(diff_data, format_name)
     return formatted_output
