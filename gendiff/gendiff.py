@@ -1,5 +1,6 @@
-from gendiff.formatters.plain import plain
-from gendiff.formatters.stylish import stylish
+from gendiff.formatters.json import to_json
+from gendiff.formatters.plain import to_plain
+from gendiff.formatters.stylish import to_stylish
 from gendiff.parser import parse_file_to_dict
 
 
@@ -36,9 +37,11 @@ def compare_dicts(first_file, second_file):
 
 def formatter(result_data, format_name):
     if format_name == 'stylish':
-        return stylish(result_data)
+        return to_stylish(result_data)
     if format_name == 'plain':
-        return plain(result_data)
+        return to_plain(result_data)
+    if format_name == 'json':
+        return to_json(result_data)
     raise ValueError(f"Unknown output format: '{format_name}'")
 
 

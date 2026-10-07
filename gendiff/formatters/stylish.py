@@ -1,7 +1,7 @@
 from gendiff.formatters.format_value import format_value
 
 
-def stylish(result_data):
+def to_stylish(result_data):
     out = '{\n'
     for key in result_data:
         value = format_value(result_data[key].get('value'))

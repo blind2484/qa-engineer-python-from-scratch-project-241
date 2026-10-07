@@ -1,7 +1,7 @@
 from gendiff.formatters.format_value import format_value
 
 
-def plain(result_data):
+def to_plain(result_data):
     out = ''
     for key in result_data:
         old_val = format_value(result_data[key].get('old_value'))

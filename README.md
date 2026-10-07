@@ -19,13 +19,22 @@
 ```bash
 git clone https://github.com/blind2484/qa-engineer-python-from-scratch-project-241.git
 cd qa-engineer-python-from-scratch-project-241
+make install
+make build
+make package-install
 ```
 
 ## Использование
 
+|флаг        |что делает|
+|------------|----------|
+|-h, --help  |выводит help|
+|-f, --format|задаёт формат вывода ('stylish', 'plain', 'json'). по умолчанию 'stylish'|
+
 Вычислитель отличий. Шаг: Сравнение плоских файлов (JSON): [asciinema](https://asciinema.org/a/CdKZ9Bc1nE4qeU4S)  
 Вычислитель отличий. Шаг: Сравнение плоских файлов (JSON, YAML): [asciinema](https://asciinema.org/a/h61S1FmaFTNVBFva)  
-Вычислитель отличий. Шаг: Форматирование "plain": [asciinema](https://asciinema.org/a/UB79bp2F5pRLy0QB)   
+Вычислитель отличий. Шаг: Форматирование "plain": [asciinema](https://asciinema.org/a/UB79bp2F5pRLy0QB)  
+Вычислитель отличий. Шаг: Форматирование "json": [asciinema](https://asciinema.org/a/o5mSf5JextHQXcvA)
 <!-- Добавьте примеры запуска и запись asciinema — именно это смотрит работодатель -->
 
 ---
