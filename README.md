@@ -2,6 +2,7 @@
 
 [![Github Actions Status](https://github.com/hexlet-boilerplates/python-package/workflows/Python%20CI/badge.svg)](https://github.com/hexlet-boilerplates/python-package/actions)
 [![hexlet-check](https://github.com/blind2484/qa-engineer-python-from-scratch-project-241/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/blind2484/qa-engineer-python-from-scratch-project-241/actions)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=blind2484_qa-engineer-python-from-scratch-project-241&metric=coverage)](https://sonarcloud.io/summary/new_code?id=blind2484_qa-engineer-python-from-scratch-project-241)
 
 В этом проекте отрабатывается работа с коллекциями. Изучаются способы построения и обхода деревьев. Вы познакомитесь с разными форматами данных (JSON, YAML), научитесь их парсить и формировать. Начнете писать тесты (pytest) и освоите разработку через них. Познакомитесь с непрерывной интеграцией (CI) и элементами экстремального программирования (XP)
 
