@@ -29,7 +29,7 @@ jobs:
 
       - name: Tests coverage in XML
         run: make test-xml
-        
+
       - name: SonarQube Cloud Scan
         uses: sonarsource/sonarcloud-github-action@v3.0.0
         env:
@@ -42,3 +42,4 @@ jobs:
             -Dsonar.python.coverage.reportPaths=coverage.xml
             -Dsonar.sources=.
             -Dsonar.tests=tests
+            -Dsonar.exclusions=tests/**
