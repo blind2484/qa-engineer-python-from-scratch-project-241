@@ -18,3 +18,6 @@ test:
 
 test-coverage:
 	uv run pytest --cov
+
+test-xml:
+	uv run pytest --cov --cov-report=xml
